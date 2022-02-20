@@ -1,5 +1,6 @@
 package com.osman.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -10,7 +11,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.stream;
-
+@AllArgsConstructor
 @RequiredArgsConstructor
 public class UserPrincipal implements UserDetails {
 
