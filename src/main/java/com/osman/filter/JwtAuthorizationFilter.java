@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import static org.springframework.http.HttpHeaders.*;
 import static org.springframework.http.HttpStatus.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
@@ -27,6 +28,12 @@ import java.util.List;
 public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
     private JwtTokenProvider jwtTokenProvider;
+
+    @Autowired
+    public JwtAuthorizationFilter(JwtTokenProvider jwtTokenProvider) {
+        this.jwtTokenProvider = jwtTokenProvider;
+    }
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         if (request.getMethod().equalsIgnoreCase(OPTIONS_HTTP_METHOD)) {
