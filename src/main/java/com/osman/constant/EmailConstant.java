@@ -2,8 +2,8 @@ package com.osman.constant;
 
 public class EmailConstant {
     public static final String SIMPLE_MAIL_TRANSFER_PROTOCOL = "smtps";
-    public static final String USERNAME = "your email";
-    public static final String PASSWORD = "your password";
+    public static final String USERNAME = "odiallo.co@gmail.com";
+    public static final String PASSWORD = "medinasud";
     public static final String FROM_EMAIL = "noreplay@osmantech.com";
     public static final String CC_EMAIL = "";
     public static final String EMAIL_SUBJECT = "Osman Tech - HR, New Password";
